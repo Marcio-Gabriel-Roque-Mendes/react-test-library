@@ -44,8 +44,6 @@ describe('Teste o componente <Pokedex.js />', () => {
       isPokemonFavoriteById={ favoritesPokemons }
       pokemons={ pokemons }
     />);
-    // const currentPokemon = screen.getByText(/pikachu/i);
-    // expect(currentPokemon).toBeInTheDocument();
     const button = screen.getByRole('button', { name: /Próximo/i });
     userEvent.click(button);
     const nextPokemon = await screen.findByText(/Charmander/i);
