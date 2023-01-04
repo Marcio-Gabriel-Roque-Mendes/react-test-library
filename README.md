@@ -10,11 +10,13 @@ Com base nessa aplicação pronta, foram desenvolvidos testes utilizando o <stro
 
   * Organização dos testes;
 
-  * Testar os inputs;
-
-  * Utilizar seletores`(queries)` da biblioteca RTL (React Testing Library);
+  * Utilizar seletores`(queries)` da biblioteca RTL (React Testing Library) em testes automatizados;
   
-  * `Simular eventos` com a RTL.
+  * `Simular eventos` com a RTL em testes automatizados.
+  
+  * Testar `fluxos lógicos assíncronos` com a React Testing Library;
+  
+  * Testar os inputs;
 
 ## :wrench: Principais tecnologias utilizadas: 
 - [React.js](https://pt-br.reactjs.org/);
