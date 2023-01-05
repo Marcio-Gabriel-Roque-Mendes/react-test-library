@@ -10,26 +10,20 @@ describe('Teste se a informações detalhadas do pokémon selecionado são mostr
   () => {
     it('A página deve conter um texto <name> Details, onde <name> é o nome do pokémon',
       () => {
-        // acessar os elementos da tela
-
-        // interagir com os elementos (se necessario)
-
-        // fazer os testes
-
         const { history } = renderWithRouter(<App />);
         history.push(urlPikachuDetails);
 
         const titleDetails = screen.getByText(/pikachu details/i);
         expect(titleDetails).toBeInTheDocument();
       });
+
     it('Não deve existir o link de navegação para os detalhes do pokémon selecionado',
       () => {
         const { history } = renderWithRouter(<App />);
         history.push(urlPikachuDetails);
 
         const linkDetailsPokemon = screen.queryByRole('link', { name: /more datails/i });
-        expect(linkDetailsPokemon).toBeNull();/* se nao passar no strike, trocar por
-        not.toBeInTheDocument() e verificar se nao tem nenhum it.only */
+        expect(linkDetailsPokemon).toBeNull();
       });
     it('A seção de detalhes deve conter um heading h2 com o texto Summary',
       () => {
@@ -64,7 +58,6 @@ describe('Teste se existe na página uma seção contendo mapas',
       const location2 = screen.getByText(/kanto power plant/i);
       expect(location2).toBeInTheDocument();
 
-      // const imagePokemons = screen.getByRole('img', { name: /pikachu sprite/i });
     });
     it('A imagem da localização deve ter um atributo src com a URL da localização',
       () => {
@@ -72,7 +65,6 @@ describe('Teste se existe na página uma seção contendo mapas',
         history.push(urlPikachuDetails);
 
         const imageLocation = screen.getAllByRole('img', { name: /Pikachu location/i });
-        // console.log(imageLocation[0].src);
 
         const linkGif1 = 'https://pwo-wiki.info/images/4/47/Viridian_Forest.gif';
         expect(imageLocation[0]).toHaveAttribute('src', linkGif1);

@@ -63,7 +63,7 @@ test('Teste também se a URL exibida no navegador muda para /pokemon/<id>',
     const pokemonEkans = screen.getByText(/ekans/i);
     expect(pokemonEkans).toBeDefined();
 
-    /* !!! */ const moreDetailsLink = screen.getByRole('link', { name: /more details/i });
+   const moreDetailsLink = screen.getByRole('link', { name: /more details/i });
 
     userEvent.click(moreDetailsLink);
     expect(history.location.pathname).toBe('/pokemons/23');
@@ -87,9 +87,5 @@ describe('Teste se existe um ícone de estrela nos pokémons favoritados:', () =
       name: /pikachu is marked as favorite/i });
     expect(starFavorite).toHaveAttribute('alt', expect
       .stringContaining('Pikachu is marked as favorite'));
-  });
-
-  test('', () => {
-
   });
 });
