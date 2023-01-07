@@ -54,4 +54,8 @@ src/tests
 ## Prévia com os testes rodando:
 https://user-images.githubusercontent.com/99992471/210023066-aedede5e-9fa0-4def-a374-3e25ad5c5568.mp4
 
-Essa aplicação React foi criada pela Trybe, para fins didáticos.
+## Testes desenvolvido por: 
+Marcio Gabriel Roque Mendes
+
+### Observações:
+O front-end dessa aplicação React foi criada pela Trybe, para fins didáticos.
